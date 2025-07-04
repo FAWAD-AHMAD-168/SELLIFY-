@@ -12,7 +12,7 @@ const Navbar = () => {
   return (
    <header className='w-full flex justify-between items-center bg-black text-white p-4  '> 
     <div className='flex items-center gap-2'> 
-        <img src='/images/sellify.png' className='h-[40px] w-[40px]'/>
+        <img src='/vite.svg' className='h-[40px] w-[40px]'/>
         <h3 className=' font-bold text-2xl'>Sellify</h3>
 
     </div>
