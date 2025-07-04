@@ -1,5 +1,5 @@
 import { useForm } from "react-hook-form";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import api from "../../services/api";
 
 
@@ -72,6 +72,8 @@ const Login = () => {
         >
           Login
         </button>
+
+        <p className="text-sm mt-4">New here , <Link to="/signup"> <span className="underline font-semibold">Sign Up</span></Link>  before login.</p>
       </form>
     </div>
   );

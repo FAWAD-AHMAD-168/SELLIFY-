@@ -19,7 +19,7 @@ const Signup = () => {
       else if (role === "seller") navigate("/dashboard/seller");
       else navigate("/dashboard/user");
     } catch (err) {
-      alert(err.response?.data?.message || "Signup failed");
+      alert(err.response?.data?.message || "sign up failed");
     }
   };
 
@@ -33,7 +33,7 @@ const Signup = () => {
 
         <input
           type="text"
-          placeholder="Name"
+          placeholder="Username"
           {...register("name", {
             required: "Name is required",
             minLength: {
@@ -48,7 +48,7 @@ const Signup = () => {
         )}
 
         <input
-          type="email"
+          type="text"
           placeholder="Email"
           {...register("email", {
             required: "Email is required",
@@ -81,8 +81,10 @@ const Signup = () => {
 
         <select
           {...register("role", { required: true })}
-          className="w-full mb-4 p-2 border border-black rounded"
+          className="w-full mb-20 p-2 border border-black rounded"
         >
+          <option value="">Select role</option>
+          
           <option value="user">User</option>
           <option value="seller">Seller</option>
           <option value="admin">Admin</option>
